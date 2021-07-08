@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Authenticate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- if we wrap ion-item in list it will not make any change but it is good practice-->
+  <ion-list>
+  <ion-item> <!-- if we dont use the ion-item username will be wriiten but it willnot look gd-->
+    <ion-label position="floating">UserName</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  </ion-list>
+  <ion-spinner color="primary" *ngIf="isLoading"></ion-spinner>
+  <ion-button color="primary" (click)="onLogin()" *ngIf="!isLoading">Login</ion-button>
+
+</ion-content>

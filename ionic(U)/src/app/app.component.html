@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-menu side="start">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>PairBnb</ion-title>
+
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle> <!--Using ion-menu toogle so that when click on option in sidebar it than closes-->
+        <ion-item lines="none" routerLink="/places/tabs/discover">
+        <ion-icon name="business" slot="start"></ion-icon>
+        <ion-label>Discover</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+        <ion-item lines="none" routerLink="/bookings">
+        <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+        <ion-label>Your Bookings</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+        <ion-item lines="none" (click)="onLogout()" button>  <!-- using button keword for ripple effect i.e for animation-->
+        <ion-icon name="exit" slot="start"></ion-icon>
+        <ion-label>Log Out</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+
+
+      </ion-list>
+    </ion-content>
+
+
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>
+
+
+<!-- Adding the side drawer here so that we dont have to write code for side drawer of diffrent pages  -->
